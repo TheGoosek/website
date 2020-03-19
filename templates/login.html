@@ -1,0 +1,36 @@
+<head>
+    <link
+        href={{ url_for('static', filename='style.css')}}
+        rel='stylesheet'
+    >
+
+    <link
+        href={{ url_for('static', filename='login.css')}}
+        rel='stylesheet'
+    >
+</head>
+
+
+<h1>TODO APP</h1>
+
+
+{% if error %}
+<p style="color:white;font-size:2rem;text-align:center;">
+    Account doesn't exist. Try again or go to the
+    <a href='/'>Sign Up</a> page
+</p>
+{% endif %}
+
+
+<form  id="formcolor" method="POST">
+    <label>Email</label>
+    <input type="email" maxlength="30" name="email" required>
+    <br>
+    <label>Password</label>
+    <input type="password" minlength="6" maxlength="20" name="password" required>
+    <br>
+    <input  type="checkbox" name="remember">
+    <label id="remember">Remember Me</label>
+    <br>
+    <input type="submit" value="Log In">
+</form>

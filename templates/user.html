@@ -1,0 +1,71 @@
+<head>
+    <link
+        href={{ url_for('static', filename='style.css')}}
+        rel='stylesheet'
+    >
+
+    <link
+        href={{ url_for('static', filename='login.css')}}
+        rel='stylesheet'
+    >
+
+    
+    <link
+        href={{ url_for('static', filename='user.css')}}
+        rel='stylesheet'
+    >
+</head>
+
+{% if name != session['account'] %}
+    <p>Something went wrong, please go to 
+        <a href={{ url_for('login') }}>Log In</a> / 
+        <a href={{ url_for('index') }}>Sign Up</a>
+    </p>
+
+{% else %}
+
+<h1>TODO APP</h1>
+<div class="hello">
+    <p>Hello, {{ name|title }}!</p>
+    <p>This is Your tasks</p>
+</div>
+    <div class="wrapper">
+    {% for task in tasks %}
+    <!-- <div class="asd"></div> -->
+    <div id={{ loop.index|string }} class="card">
+        <div class="card-img">
+        <h2 class="card-heading">{{ task.title }}</h2>
+        <p class="card-details">{{ task.details }}</p>
+        <p class="card=start-date">{{ task.created_on }}</p>
+        {% if task.deadline %}
+        <p class="card-end-date">{{ task.deadline }}</p>
+        {% endif %}
+        <div class="card-ui">
+        <a href={{ "/status/" + loop.index|string }}>Change Status</a>
+        <a href="#" onclick=remove_task(event)>Remove</a>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+</div>
+
+<form method="POST">
+    <div style='color:white'>
+        <label>Title</label>
+        <input minlength="5" maxlength="20" name="title" placeholder="Назввание" required>
+        <br>
+        <label>Details</label>
+        <input name="details" placeholder="Описание" >
+        <br>
+        <label>Deadline</label>
+        <input type="Data" name="deadline" placeholder="Не обязательно" >
+        <br>
+        <input type="submit" value="Send!">
+    </div>
+</form>
+
+<a id="form-togler">show</a>
+
+<a id="logout" href={{ url_for('logout') }}>Log Out</a>
+<script src={{ url_for('static', filename='script.js') }}></script>
+{% endif %}

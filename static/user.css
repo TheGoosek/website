@@ -1,0 +1,102 @@
+
+div.card{
+    width: 300px;
+    margin:  20px ;
+    text-align: center;
+    color: black;
+    font-size: 130%;
+    border:2px whitesmoke solid;
+    background-color: whitesmoke;
+    border-radius: 3%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    
+}
+
+p.card-start-date{
+    padding-left: 5px;
+}
+
+
+div.card-img{
+    height: 100%;
+    font-weight: 100%;
+    background-image: url(https://pm1.narvii.com/6609/e19ebde01e363bfd7c896a07a53c65d69a4b0c7e_hq.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 2%;
+    
+    
+}
+
+div.card-heading{
+    margin-top: 0;
+}
+
+div.hello{    
+    margin: 30px;
+    width: 30%;
+    color:white;
+    font-size: 150%;
+    margin-bottom: 10px;
+}
+
+div.wrapper{
+    width: 100%;   
+    margin-top:50px;
+    margin-bottom: auto;
+    /* border: solid yellow 1px; */
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+}
+
+
+
+div.card-ui{
+    color:black;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.card-ui a{
+    width: 40%;
+    padding: 5px inherit;
+    font-size:1rem;
+    background:rgba(255,255,255,0.5);
+    color:black;
+    border-radius: 4px;
+}
+
+h2.card-heading{
+    text-align: center;
+}
+
+form{
+    position: absolute;
+    top:30vh;
+    left:40vw;
+
+}
+
+a#form-togler{
+    position:fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 20px;
+    background: red;
+    color:white;
+
+}
+
+a#logout{
+    font-size: 1rem;
+    text-align: center;
+    width: 10%;
+    background-color: rgba(255,255,255,0.5);
+    position: relative;
+    left:45%;
+    right: 45%;
+}

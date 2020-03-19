@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption&display=swap&subset=cyrillic,cyrillic-ext,latin-ext');
+
+body {
+    font-family: 'PT+Sans+Caption',swap ;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height:100vh;
+    margin: 0;
+    background-image: url(http://ilyakhasanov.ru/images/background/66.png);
+}
+
+h1{
+    text-align: center;
+    font-family: 'PT+Sans+Caption',swap;
+    color:cyan;
+   
+    
+}
+
+form{
+    /* border:1px solid red; */
+    width: 20%;
+    margin: 10px auto;   
+    padding: 10px;
+    background-color: rgb(77, 73, 73,0.4);
+    border-radius: 10px;
+    text-align:center;
+    box-shadow: 1px 1px black;
+}
+
+form#formcolor{
+    color:white
+}
+
+input{
+   
+    width: 100%;
+    border-radius: 2px;
+    outline: none;
+    border:0;
+    background-color: white;
+    text-align: center;
+}
+
+input[type=submit]{
+    width: 60%;
+    margin: 10px auto;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+input[type=submit]:hover{
+    filter:drop-shadow(1px 1px(gray));
+    transition: scale(0.8);
+
+
+}
+
+a{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+label{
+    margin-bottom:5px ;
+}
+
+form * {
+    display: block;
+}
